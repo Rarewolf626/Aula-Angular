@@ -1,0 +1,16 @@
+<div *ngIf="hero !== undefined">
+  <h2>Detalhe Hero</h2>
+  <h2>Selected Hero</h2>
+  <h3>{{ hero.name }}</h3>
+
+  <div>
+    <label for="heroName">Hero Name </label>
+    <input
+      type="text"
+      name="heroName"
+      id="heroName"
+      placeholder="Hero Name"
+      [(ngModel)]="hero.name"
+    />
+  </div>
+</div>

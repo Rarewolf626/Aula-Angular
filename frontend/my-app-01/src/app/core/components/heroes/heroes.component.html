@@ -1,0 +1,67 @@
+<div class="tabela">
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z0">
+    <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef>ID</th>
+      <td mat-cell *matCellDef="let hero">{{ hero.id }}</td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef>Name</th>
+      <td mat-cell *matCellDef="let hero">{{ hero.name }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="action">
+      <th mat-header-cell *matHeaderCellDef>Action</th>
+      <td mat-cell *matCellDef="let hero">
+        <mat-icon
+          aria-hidden="false"
+          aria-label="Example home icon"
+          fontIcon="person_remove"
+        ></mat-icon>
+      </td>
+    </ng-container>
+
+    <!-- Weight Column -->
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr
+      mat-row
+      *matRowDef="let hero; columns: displayedColumns"
+      (click)="selectHero(hero)"
+    ></tr>
+  </table>
+</div>
+<div class="bottom">
+  <button mat-raised-button (click)="openDialog()" color="primary">
+    Add hero
+  </button>
+</div>
+
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>
+<!-- <ul>
+  <li *ngFor="let hero of dataSource" (click)="selectHero(hero)">
+    <span>Id: </span>{{ hero.id }} Name: {{ hero.name }}
+  </li>
+</ul> Klj for hj on themes -->
+
+<!-- <div *ngIf="selectedHero !== undefined">
+  <h2>Heroes Details</h2>
+  <h2>Selected Hero</h2>
+  <h3>{{ selectedHero.name }}</h3>
+
+  <div>
+    <label for="heroName">Hero Name </label>
+    <input
+      type="text"
+      name="heroName"
+      id="heroName"
+      placeholder="Hero Name"
+      [(ngModel)]="selectedHero.name"
+    />
+  </div>
+</div> -->
