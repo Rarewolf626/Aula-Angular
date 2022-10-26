@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 import { MaterialModule } from 'src/app/material/material.module';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { HeroInsertDialogComponent } from './hero-insert-dialog/hero-insert-dialog.component';
@@ -14,7 +15,7 @@ const COMPONENTS = [
 
 @NgModule({
   declarations: [COMPONENTS],
-  imports: [CommonModule, MaterialModule, FormsModule],
+  imports: [CommonModule, MaterialModule, FormsModule, RouterModule],
   exports: [COMPONENTS],
 })
 export class ComponentsModule {}

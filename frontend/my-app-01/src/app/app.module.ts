@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ComponentsModule } from './core/components/components.module';
 import { ToolbarComponent } from './core/layout/toolbar/toolbar.component';
+import { ServicesModule } from './core/services/services.module';
 import { MaterialModule } from './material/material.module';
 
 @NgModule({
@@ -15,6 +16,7 @@ import { MaterialModule } from './material/material.module';
     BrowserAnimationsModule,
     MaterialModule, // module for angular material
     ComponentsModule,
+    ServicesModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

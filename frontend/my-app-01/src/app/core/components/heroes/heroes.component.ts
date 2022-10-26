@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import {
   MatDialog,
   MatDialogRef,
-  MAT_DIALOG_DATA,
+  MAT_DIALOG_DATA
 } from '@angular/material/dialog';
 import { MatTable } from '@angular/material/table';
 import { Hero } from '../../model/hero';

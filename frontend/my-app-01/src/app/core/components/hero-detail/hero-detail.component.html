@@ -1,16 +1,22 @@
+<br />
 <div *ngIf="hero !== undefined">
-  <h2>Detalhe Hero</h2>
-  <h2>Selected Hero</h2>
-  <h3>{{ hero.name }}</h3>
-
-  <div>
-    <label for="heroName">Hero Name </label>
-    <input
-      type="text"
-      name="heroName"
-      id="heroName"
-      placeholder="Hero Name"
-      [(ngModel)]="hero.name"
-    />
-  </div>
+  <mat-card>
+    <mat-card-title>{{ hero.name }}</mat-card-title>
+    <mat-card-subtitle>Hero Detail</mat-card-subtitle>
+    <mat-card-content>
+      <div>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Hero Name</mat-label>
+          <input
+            name="heroName"
+            id="heroName"
+            matInput
+            placeholder="Ex: Beto"
+            value=""
+            [(ngModel)]="hero.name"
+          />
+        </mat-form-field>
+      </div>
+    </mat-card-content>
+  </mat-card>
 </div>

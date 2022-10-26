@@ -8,6 +8,7 @@ import { TaskModule } from './task/task.module';
 import { User } from './user/entities/user.entity';
 import { UserModule } from './user/user.module';
 
+//jrcampos82
 @Module({
   imports: [
     TypeOrmModule.forRoot({
