@@ -8,8 +8,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import {MatSelectModule} from '@angular/material/select';
 const COMPONENTS = [
   MatSliderModule,
   MatTableModule,
@@ -19,6 +18,8 @@ const COMPONENTS = [
   MatButtonModule,
   MatInputModule,
   MatIconModule,
+  MatSelectModule,
+
 ];
 @NgModule({
   declarations: [],

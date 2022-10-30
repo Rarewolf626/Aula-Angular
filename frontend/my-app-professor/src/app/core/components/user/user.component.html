@@ -1,0 +1,50 @@
+<form [formGroup]="userForm" (ngSubmit)="onSubmit(userForm)">
+  <div class="form-group">
+    <p>
+      <mat-form-field appearance="outline" color="accent">
+        <mat-label for="name">Nome</mat-label>
+        <input matInput id="name" name="name" placeholder="digite seu nome" formControlName="name" />
+        <mat-hint>Tamanho máximo de 15 caracteres</mat-hint>
+      </mat-form-field>
+    </p>
+    <p>
+
+      <mat-form-field appearance="outline" color="accent">
+        <mat-label for="promoKey">Email</mat-label>
+        <input matInput id="promoKey" name="promoKey" placeholder="Email"  formControlName="email" />
+        <mat-hint>Tamanho máximo de 10 caracteres </mat-hint>
+      </mat-form-field>
+    </p>
+    <p>
+
+     <mat-form-field appearance="outline" color="accent">
+        <mat-label for="password">Password</mat-label>
+        <input matInput id="password" name="password" placeholder="password"  formControlName="password" />
+        <mat-hint>Tamanho máximo de 10 caracteres </mat-hint>
+      </mat-form-field>
+    </p>
+
+    <p>
+
+     <mat-form-field appearance="outline" color="accent">
+        <mat-label for="confirmPwd">Confirm Password</mat-label>
+        <input matInput id="confirmPwd" name="confirmPwd" placeholder="confirm your password"  formControlName="confirmPwd"  />
+        <mat-hint>Tamanho máximo de 10 caracteres </mat-hint>
+      </mat-form-field>
+    </p>
+
+
+  </div>
+  <div class="form-group submit-button">
+    <button mat-flat-button color="accent">
+      Enviar
+    </button>
+  </div>
+</form>
+
+<pre>
+    {{ userForm.value | json }}
+</pre>
+<pre>
+    {{ userForm.status | json }}
+</pre>

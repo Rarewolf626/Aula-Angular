@@ -16,15 +16,29 @@ export class User {
   id: string;
   @Column()
   nome: string;
-  @Column()
+  @Column({
+    type: 'varchar',
+    nullable: true,
+    default: ''
+  })
   email: string;
   @Column()
   password: string;
-  @Column()
+  @Column({
+    default: true,
+  })
   status: boolean;
-  @Column()
+  @Column({
+    type: 'varchar',
+    nullable: true,
+    default: ''
+  })
   confirmationToken: string;
-  @Column({ nullable: false })
+  @Column({
+    type: 'varchar',
+    nullable: true,
+    default: ''
+  })
   salt: string;
   @CreateDateColumn()
   createAt: Date;
