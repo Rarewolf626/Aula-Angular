@@ -29,6 +29,6 @@ const COMPONENTS = [
     ReactiveFormsModule,
 
   ],
-  exports: [COMPONENTS],
+  exports: [COMPONENTS, RouterModule],
 })
 export class ComponentsModule {}

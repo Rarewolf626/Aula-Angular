@@ -2,8 +2,8 @@
   <div class="form-group">
     <p>
       <mat-form-field appearance="outline" color="accent">
-        <mat-label for="name">Nome</mat-label>
-        <input matInput id="name" name="name" placeholder="digite seu nome" formControlName="name" />
+        <mat-label for="nome">Nome</mat-label>
+        <input matInput id="nome" name="nome" placeholder="digite seu nome" formControlName="nome" />
         <mat-hint>Tamanho máximo de 15 caracteres</mat-hint>
       </mat-form-field>
     </p>
@@ -36,15 +36,8 @@
 
   </div>
   <div class="form-group submit-button">
-    <button mat-flat-button color="accent">
+    <button mat-flat-button color="accent" [disabled]="userForm.invalid">
       Enviar
     </button>
   </div>
 </form>
-
-<pre>
-    {{ userForm.value | json }}
-</pre>
-<pre>
-    {{ userForm.status | json }}
-</pre>
