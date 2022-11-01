@@ -1,25 +1,10 @@
-version: '3'
+version: '3.8'
 services:
-  # nginx-app:
-  #   image: nginx
-  # node:
-  #   build:
-  #     dockerfile: ./docker/node.dockerfile
-  #     context: .
-  #   image: node
-  #   container_name: node_docker
-  #   ports:
-  #     - 3000:3000
-  #   #     networks:
-  #   #         - development-network
-  #   volumes:
-  #     - .:/home/node/app
-
-  #   depends_on:
-  #     - mysql
-
   mysql:
-    image: mysql
+    image: mysql:8.0
+    cap_add:
+      - SYS_NICE
+    restart: always
     container_name: mysql_todolist
     # networks:
     #   - development-network
